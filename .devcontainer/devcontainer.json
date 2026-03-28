@@ -1,9 +1,18 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/universal:2",
 	"features": {
-		"ghcr.io/devcontainers-extra/features/dasel-asdf:2": {},
-		"ghcr.io/stu-bell/devcontainer-features/node:0": {},
-		"ghcr.io/devcontainers-extra/features/node-asdf:0": {},
+		"ghcr.io/devcontainers-extra/features/dasel-asdf:2": {
+			"version": "latest"
+		},
+		"ghcr.io/stu-bell/devcontainer-features/node:0": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/devcontainers-extra/features/node-asdf:0": {
+			"version": "latest"
+		},
 		"ghcr.io/roul/devcontainer-features/mise-node:1": {}
 	}
 }
