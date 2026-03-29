@@ -30,6 +30,44 @@ let obj = {
     currentStatus:"working"
 };
 console.log(obj);
+console.log(typeof obj)
+console.log(typeof heroes)
+console.log(typeof null)
+console.log (typeof undefined)
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// two types ki memory hoti hai 
+//  1 => stack(primitive) => copy of variable is provided thats why it doesn't change the original value.
+// //  2 => heap(non primitive) => refence of variable is provided that's why original copy gets change.
+ let obj1 = {
+    student : "kalyani tripathi",
+    school: "St Xavier ",
+    class:7+"th"
+ };
+ let obj2 = obj1 ;
+ obj2.class = 8+"th";
+console.log(obj2)
+console.log(obj1) // original name gets changed
+
+
+// ***************************
+let usereName = "hitesh";
+let anotherName = usereName;
+anotherName = "sourav";
+console.log(usereName) // original name doesnot gets changed
+console.log(anotherName) 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
