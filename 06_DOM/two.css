@@ -1,0 +1,10 @@
+.day , .new{
+
+    background-color: rgb(157, 63, 63);
+    padding: 20px;
+    margin : 8px;
+    border-radius: 17px;
+    width : 30vh;
+    text-align: center;
+
+}
