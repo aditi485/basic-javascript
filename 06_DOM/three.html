@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom manipulation</title>
+</head>
+<body>
+    <ul class = "lis">
+      <li> javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(LangName){
+        const list = document.createElement("li");
+        list.innerHTML = `${LangName}`;
+        document.querySelector(".lis").appendChild(list)
+    }
+    addlang("python")
+    addlang("typescript")
+
+
+    function addoptlang(langname){
+        const list = document.createElement('li')
+        list.appendChild(document.createTextNode(langname))
+        document.querySelector('.lis').appendChild(list)
+    }
+    addoptlang("swift")
+
+    // ++++++++++edit++++++++++++++
+    const first = document.queryselector("li:firstchild")
+    first.outerHTML = "<li>mojo</li>"
+
+
+
+
+   // +++++++++++REMOVE++++++++++++++
+   const last = document.querySelector('li:last-child')
+   last.remove()
+
+</script>
+
+</html>
