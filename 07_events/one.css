@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(244, 210, 158);
+}
+
+div{
+ height :100px;
+ width:100px;
+ padding: 18px;
+ background-color: chocolate;
+ margin: 5px;
+}

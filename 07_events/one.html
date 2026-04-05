@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="four.css">
+</head>
+<body>
+    <h2> framework </h2>
+    <div id = "one">box1</div>
+    <div id="two">box2</div>
+    <div id="three">box3</div>
+    <div id = "four">box4</div>
+</body>
+<script>
+    // using event is not a good practise
+    document.querySelector("#two").onclick = function(){
+        alert("you visited");    
+    }
+    // we should use event listeners
+   document.querySelector("#three").addEventListener('click', function(e){
+    alert("it was clicked")
+   },)
+
+
+   //+++++++++++++++++EVENT PROPOGATION+++++++++++++++++
+
+
+
+   // event propogation => if suppose two event are appling on the single text then 
+   // 1=> capturing 
+   // 2=> bubling
+   const body = document.querySelector("body").addEventListener('click',function(e){
+    alert ("you click the body")
+    
+   },false)
+   // this being true first inside will be display then div => it means ineer to outer
+
+
+
+   //++++++++++++EVENT OBJECT ++++++++++++++++++++
+
+
+
+   // now study about event object  => e = this tells about e.target ,e.clientX , e.client Y and many more 
+// sometimes we donot want bubling in that case
+ const body1 = document.querySelector("body").addEventListener('click',function(e){
+    alert ("you click the body");
+    e.preventDefault()// it is used to stop the link to be opened
+    e.stopPropagation()// helps to stop the propogation
+   },false)
+   
+  
+</script>
+</html>
