@@ -20,3 +20,4 @@ console.log(teacher.name)
 
 // mordern day syntax
 Object.setPrototypeOf(teacher,user)
+console.log(teacher.email)
