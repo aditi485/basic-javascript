@@ -3,7 +3,7 @@ const tea = Object.getOwnPropertyDescriptor(Math,"PI");
 console.log(tea)// we cannot change the value of PI becocz it is hardcoded as well as if ew see the property its writable property is false
 
 
-// can we make ourobject whose value cannot be changed 
+// can we make our object whose value cannot be changed 
 let chai = {
     name:"ginger chai",
     price:250,
@@ -16,6 +16,14 @@ console.log(Object.getOwnPropertyDescriptor(chai,"price")) // chai => is object 
 // we can define our own property such that no one else can implement it 
 Object.defineProperty(chai,"name",{
     writable:false,
-    enumerable:false
+    enumerable:false  // THROUGH THE ENUMERABLE property we can stop the iteration
 })
 console.log(Object.getOwnPropertyDescriptor(chai,"name")) 
+
+//for eg
+Object.defineProperty(chai,"price",{
+    enumerable:false
+})
+for(let [key,values] of Object.entries(chai)){
+    console.log(`${key}:${value}`)
+}
